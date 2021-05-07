@@ -30,7 +30,7 @@ products_params1 = [
 #   {name: "レタス", price: 250}
 # ]
 
-greengrocer1 = Greengrocer.new(products_params1) #商品インスタンス生成
+greengrocer1 = Greengrocer.new(products_params1) #（★）商品インスタンス生成
 # greengrocer2 = Greengrocer.new(products_params2) #商品インスタンス生成
 
 #商品に追加するデータ
@@ -39,14 +39,13 @@ adding_products_params1 = [
   {name: "にんじん", price: 250}
 ]
 
-greengrocer1.register_product(adding_products_params1) #商品インスタンスの追加
+greengrocer1.register_product(adding_products_params1) #（★）商品インスタンスの追加
 
 user = User.new  #お客さんインスタンス生成
 
-greengrocer1.disp_products #商品の表示
+greengrocer1.disp_products #（★）商品の表示
 # greengrocer2.disp_products #商品の表示
-user.choose_product(greengrocer1.products)  #商品の選択
-greengrocer1.ask_quantity(user.chosen_product)  #個数の確認
-user.dicide_quantity #個数の入力
-greengrocer1.calculate_charges(user)  #合計金額の計算
-# greengrocer1.calculate_charges(user.chosen_product, user.quantity_of_product)
+user.choose_product(greengrocer1.products)  #（★）商品の選択
+greengrocer1.ask_quantity(user.chosen_product)  #（★）個数の確認
+user.dicide_quantity #（★）個数の入力
+greengrocer1.calculate_charges(user)  #（★）合計金額の計算

@@ -8,7 +8,7 @@ class Greengrocer
   #商品の追加
   def register_product(product_params)
     product_params.each do |param|
-      @products << Product.new(param)  #商品インスタンスを1つずつ配列に代入
+      @products << Product.new(param)  #（★）商品インスタンスを1つずつ配列に代入
     end
   end
 
@@ -35,15 +35,5 @@ class Greengrocer
     puts "合計金額は#{total_price.floor}円です。"
     puts "お買い上げありがとうございました！"
   end
-
-  # def calculate_charges(chosen_product, quantity_of_product)
-  #   total_price = chosen_product.price * quantity_of_product
-  #   if quantity_of_product >= 5
-  #     puts "5個以上なので10%割引となります！"
-  #     total_price *= 0.9
-  #   end
-  #   puts "合計金額は#{total_price.floor}円です。"
-  #   puts "お買い上げありがとうございました！"
-  # end
 
 end
