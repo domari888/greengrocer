@@ -20,6 +20,12 @@ Dir[File.join(File.dirname(__FILE__), "../lib/**/*.rb")].each {|f| require f}
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
+
+  #テストに関係ない標準出力を無効にする設定
+  config.before(:each) do
+    allow($stdout).to receive(:write)
+  end
+
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
