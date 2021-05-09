@@ -11,13 +11,13 @@
 # 個数を選択
 # 合計を計算
 
-require "./product.rb"
-require "./user.rb"
-require "./greengrocer.rb"
+require "./lib/product.rb"
+require "./lib/user.rb"
+require "./lib/greengrocer.rb"
 
 
 #1店舗目
-products_params1 = [
+product_params1 = [
   {name: "トマト", price: 100},
   {name: "きゅうり", price: 200},
   {name: "玉ねぎ", price: 300},
@@ -30,16 +30,16 @@ products_params1 = [
 #   {name: "レタス", price: 250}
 # ]
 
-greengrocer1 = Greengrocer.new(products_params1) #（★）商品インスタンス生成
+greengrocer1 = Greengrocer.new(product_params1) #（★）商品インスタンス生成
 # greengrocer2 = Greengrocer.new(products_params2) #商品インスタンス生成
 
 #商品に追加するデータ
-adding_products_params1 = [
+adding_product_params1 = [
   {name: "じゃがいも", price: 250},
   {name: "にんじん", price: 250}
 ]
 
-greengrocer1.register_product(adding_products_params1) #（★）商品インスタンスの追加
+greengrocer1.register_product(adding_product_params1) #（★）商品インスタンスの追加
 
 user = User.new  #お客さんインスタンス生成
 
